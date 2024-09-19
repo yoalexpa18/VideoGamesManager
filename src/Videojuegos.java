@@ -3,14 +3,12 @@ import Librerias.UtilesVideojuegos;
 public abstract class Videojuegos {
 
     protected String nombre;
-//    protected String tipo;
     protected double precio;
     private String plataforma;
 
 
     public Videojuegos(String tipo, double precio) {
         this.nombre = UtilesVideojuegos.DEF_NOMBRE;
-//        this.tipo = UtilesVideojuegos.DEF_TIPO;
         this.precio = UtilesVideojuegos.DEF_PRECIO;
         this.plataforma = UtilesVideojuegos.DEF_PLATAFORMA;
     }
@@ -26,11 +24,6 @@ public abstract class Videojuegos {
         } else {
             this.plataforma = UtilesVideojuegos.DEF_PLATAFORMA;
         }
-//        if (UtilesVideojuegos.validarTipo(tipo)) {
-//            this.tipo = tipo;
-//        } else {
-//            this.tipo = UtilesVideojuegos.DEF_TIPO;
-//        }
         if (UtilesVideojuegos.validarPrecio(precio)) {
             this.precio = precio;
         } else {
@@ -56,14 +49,6 @@ public abstract class Videojuegos {
         }
     }
 
-//    public String getTipo() {
-//        return tipo;
-//    }
-//    public void setTipo(String tipo) {
-//        if (UtilesVideojuegos.validarTipo(tipo)) {
-//            this.tipo = tipo;
-//        }
-//    }
 
     public String getPlataforma() {
         return plataforma;
