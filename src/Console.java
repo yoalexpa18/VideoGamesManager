@@ -1,3 +1,4 @@
+
 public interface Console {
     //Encender la consola
     void switchOn();
