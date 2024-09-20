@@ -4,36 +4,35 @@ public abstract class Videojuegos {
 
     protected String nombre;
     protected double precio;
-    private String plataforma;
+    protected Plataformas plataforma;
 
 
     public Videojuegos(String tipo, double precio) {
         this.nombre = UtilesVideojuegos.DEF_NOMBRE;
         this.precio = UtilesVideojuegos.DEF_PRECIO;
-        this.plataforma = UtilesVideojuegos.DEF_PLATAFORMA;
+        this.plataforma = plataforma;
     }
 
-    public Videojuegos(String nombre, double precio,String plataforma ) {
+    public Videojuegos(String nombre, double precio, Plataformas plataforma) {
         if (UtilesVideojuegos.validarNombre(nombre)) {
             this.nombre = nombre;
         } else {
             this.nombre = UtilesVideojuegos.DEF_NOMBRE;
-        }
-        if (UtilesVideojuegos.validarPlataforma(plataforma)) {
-            this.plataforma = plataforma;
-        } else {
-            this.plataforma = UtilesVideojuegos.DEF_PLATAFORMA;
         }
         if (UtilesVideojuegos.validarPrecio(precio)) {
             this.precio = precio;
         } else {
             this.precio = UtilesVideojuegos.DEF_PRECIO;
         }
+
+        this.plataforma = plataforma;
+
     }
 
     public String getNombre() {
         return nombre;
     }
+
     public void setNombre(String nombre) {
         if (UtilesVideojuegos.validarNombre(nombre)) {
             this.nombre = nombre;
@@ -43,6 +42,7 @@ public abstract class Videojuegos {
     public double getPrecio() {
         return precio;
     }
+
     public void setPrecio(double precio) {
         if (UtilesVideojuegos.validarPrecio(precio)) {
             this.precio = precio;
@@ -51,9 +51,10 @@ public abstract class Videojuegos {
 
 
     public String getPlataforma() {
-        return plataforma;
+        return String.valueOf(plataforma);
     }
-    public void setPlataforma(String plataforma) {
+
+    public void setPlataforma(Plataformas plataforma) {
         this.plataforma = plataforma;
     }
 
@@ -76,7 +77,7 @@ public abstract class Videojuegos {
 
     @Override
     public String toString() {
-        return String.format("Juego: %s%nPrecio: %.2f%nPlataforma: %s%n", nombre, precio, plataforma);
+        return String.format("Juego: %s%nPrecio: %.2f€%nPlataforma: %s%n", nombre, precio, plataforma);
     }
 
 

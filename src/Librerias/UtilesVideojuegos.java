@@ -8,11 +8,6 @@ public class UtilesVideojuegos {
     public static final double DEF_PRECIO = 0;
     public static final String DEF_PLATAFORMA = "Multiplataforma";
 
-    private static final String PLAT_PLAY = "Playstation";
-    private static final String PLAT_NINT = "Nintendo";
-    private static final String PLAT_COMP = "Ordenador";
-    private static final String PLAT_XBOX = "Xbox";
-
     public static boolean validarNombre(String nombre) {
         return nombre != null && !nombre.isEmpty();
     }
@@ -25,12 +20,6 @@ public class UtilesVideojuegos {
         return precio >= 0;
     }
 
-    public static boolean validarPlataforma(String plataforma) {
-        if (plataforma != null && !plataforma.isEmpty()) {
-            return plataforma.equalsIgnoreCase(PLAT_PLAY) || plataforma.equalsIgnoreCase(PLAT_NINT)
-                    || plataforma.equalsIgnoreCase(PLAT_COMP) || plataforma.equalsIgnoreCase(PLAT_XBOX);
-        }
-        return false;
-    }
+
 
 }

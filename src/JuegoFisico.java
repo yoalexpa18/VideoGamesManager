@@ -4,7 +4,7 @@ public class JuegoFisico extends Videojuegos {
 
         String tipo = "Fisico";
 
-    public JuegoFisico(String nombre, double precio, String plataforma) {
+    public JuegoFisico(String nombre, double precio, Plataformas plataforma) {
         super(nombre,precio,plataforma);
     }
 
