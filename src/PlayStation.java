@@ -20,11 +20,11 @@ public class PlayStation implements Console {
     public void playGame(){
         System.out.println("PlayStation inicia el juego");
     }
-
     @Override
     public String getPlataforma() {
         return "PlayStation";
     }
+
 
 
 }

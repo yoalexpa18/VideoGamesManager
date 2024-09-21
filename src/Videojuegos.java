@@ -5,6 +5,7 @@ public abstract class Videojuegos {
     protected String nombre;
     protected double precio;
     protected Plataformas plataforma;
+    protected Genero genero;
 
 
     public Videojuegos(String tipo, double precio) {
@@ -13,7 +14,7 @@ public abstract class Videojuegos {
         this.plataforma = plataforma;
     }
 
-    public Videojuegos(String nombre, double precio, Plataformas plataforma) {
+    public Videojuegos(String nombre, double precio, Plataformas plataforma, Genero genero) {
         if (UtilesVideojuegos.validarNombre(nombre)) {
             this.nombre = nombre;
         } else {
@@ -24,8 +25,8 @@ public abstract class Videojuegos {
         } else {
             this.precio = UtilesVideojuegos.DEF_PRECIO;
         }
-
         this.plataforma = plataforma;
+        this.genero = genero;
 
     }
 
@@ -37,6 +38,9 @@ public abstract class Videojuegos {
         if (UtilesVideojuegos.validarNombre(nombre)) {
             this.nombre = nombre;
         }
+    }
+    public void setGenero(Genero genero) {
+        this.genero = genero;
     }
 
     public double getPrecio() {
@@ -51,7 +55,7 @@ public abstract class Videojuegos {
 
 
     public String getPlataforma() {
-        return String.valueOf(plataforma);
+        return plataforma.toString();
     }
 
     public void setPlataforma(Plataformas plataforma) {
@@ -70,14 +74,14 @@ public abstract class Videojuegos {
             testOK = false;
         } else {
             Videojuegos m = (Videojuegos) obj;
-            testOK = this.nombre.equals(m.nombre) && this.precio == m.precio && this.plataforma.equals(m.plataforma);
+            testOK = this.nombre.equals(m.nombre) && this.genero.equals(m.genero) && this.precio == m.precio && this.plataforma.equals(m.plataforma);
         }
         return testOK;
     }
 
     @Override
     public String toString() {
-        return String.format("Juego: %s%nPrecio: %.2f€%nPlataforma: %s%n", nombre, precio, plataforma);
+        return String.format("Juego: %s%nGenero: %s%nPlataforma: %s%nPrecio: %.2f€%n", nombre,genero,plataforma ,precio );
     }
 
 
