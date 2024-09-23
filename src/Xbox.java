@@ -1,28 +1,31 @@
 public class Xbox implements Console{
+
+    Plataformas plataformas;
+
     @Override
     public void switchOn(){
-        System.out.println("Xbox encendida");
+        System.out.printf("%s encendida%n", plataformas.Xbox);
     }
     @Override
     public void switchOff(){
-        System.out.println("Xbox apagada");
+        System.out.printf("%s apagada%n", plataformas.Xbox);
     }
     @Override
     public void installGame(){
-        System.out.println("Juego installado en PlayStation");
+        System.out.printf("Juego installado en %s.%n", plataformas.Xbox);
     }
     @Override
     public void uninstallGame(){
-        System.out.println("Juego desinstalado en PlayStation");
+        System.out.printf("Juego desinstalado en %s.%n", plataformas.Xbox);
     }
     @Override
     public void playGame(){
-        System.out.println("Xbox inicia el juego");
+        System.out.printf("%s inicia el juego%n", plataformas.Xbox);
     }
 
     @Override
     public String getPlataforma() {
-        return "Xbox";
+        return "" + plataformas.Xbox;
     }
 
 }

@@ -1,28 +1,30 @@
 public class PlayStation implements Console {
 
+    Plataformas plataformas;
+
     @Override
     public void switchOn(){
-        System.out.println("PlayStation encendida");
+        System.out.printf("%s encendida%n", plataformas.PlayStation);
     }
     @Override
     public void switchOff(){
-        System.out.println("PlayStation apagada");
+        System.out.printf("%s apagada%n", plataformas.PlayStation);
     }
     @Override
     public void installGame(){
-        System.out.println("Juego installado en PlayStation");
+        System.out.printf("Juego installado en %s%n", plataformas.PlayStation);
     }
     @Override
     public void uninstallGame(){
-        System.out.println("Juego desinstalado en PlayStation");
+        System.out.printf("Juego desinstalado en %s %n", plataformas.PlayStation);
     }
     @Override
     public void playGame(){
-        System.out.println("PlayStation inicia el juego");
+        System.out.printf("%s inicia el juego%n", plataformas.PlayStation);
     }
     @Override
     public String getPlataforma() {
-        return "PlayStation";
+        return "" + plataformas.PlayStation;
     }
 
 

@@ -1,27 +1,30 @@
 public class Nintendo implements Console {
+
+    Plataformas plataforma;
+
     @Override
     public void switchOn(){
-        System.out.println("Nintendo encendida");
+        System.out.printf("%s encendida%n", plataforma.Nintendo);
     }
     @Override
     public void switchOff(){
-        System.out.println("Nintendo apagada");
+        System.out.printf("%s apagada%n", plataforma.Nintendo);
     }
     @Override
     public void installGame(){
-        System.out.println("Juego installado en Nintendo");
+        System.out.printf("Juego installado en %s.%n", plataforma.Nintendo);
     }
     @Override
     public void uninstallGame(){
-        System.out.println("Juego desinstalado en Nintendo");
+        System.out.printf("Juego desinstalado en %s%n", plataforma.Nintendo);
     }
     @Override
     public void playGame(){
-        System.out.println("Nintendo inicia el juego");
+        System.out.printf("%s inicia el juego%n", plataforma.Nintendo);
     }
 
     @Override
     public String getPlataforma() {
-        return "Nintendo";
+        return "" + plataforma.Nintendo;
     }
 }
