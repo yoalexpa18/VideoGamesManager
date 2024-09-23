@@ -7,10 +7,10 @@ public interface Console {
     void switchOff();
 
     //Instalar juego
-    void installGame();
+    void installGame(Videojuegos videojuego);
 
     //Desinstalar juego
-    void uninstallGame();
+    void uninstallGame(Videojuegos videojuego);
 
     //Jugar al juego
     void playGame();

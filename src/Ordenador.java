@@ -11,12 +11,12 @@ public class Ordenador implements Console {
         System.out.printf("%s apagado%n", plataforma.Ordenador);
     }
     @Override
-    public void installGame(){
-        System.out.printf("Juego installado en %s.%n", plataforma.Ordenador);
+    public void installGame(Videojuegos videojuegos){
+        System.out.printf("%s installado en %s.%n",videojuegos, plataforma.Ordenador);
     }
     @Override
-    public void uninstallGame(){
-        System.out.printf("Juego desinstalado en %s.%n", plataforma.Ordenador);
+    public void uninstallGame(Videojuegos videojuegos){
+        System.out.printf("%s desinstalado en %s %n",videojuegos.nombre, plataforma.Ordenador);
     }
     @Override
     public void playGame(){

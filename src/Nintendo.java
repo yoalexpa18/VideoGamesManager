@@ -11,12 +11,12 @@ public class Nintendo implements Console {
         System.out.printf("%s apagada%n", plataforma.Nintendo);
     }
     @Override
-    public void installGame(){
-        System.out.printf("Juego installado en %s.%n", plataforma.Nintendo);
+    public void installGame(Videojuegos videojuegos){
+        System.out.printf("%s installado en %s.%n",videojuegos, plataforma.Nintendo);
     }
     @Override
-    public void uninstallGame(){
-        System.out.printf("Juego desinstalado en %s%n", plataforma.Nintendo);
+    public void uninstallGame(Videojuegos videojuegos){
+        System.out.printf("%s desinstalado en %s %n",videojuegos.nombre, plataforma.Nintendo);
     }
     @Override
     public void playGame(){

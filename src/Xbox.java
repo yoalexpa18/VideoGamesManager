@@ -11,12 +11,12 @@ public class Xbox implements Console{
         System.out.printf("%s apagada%n", plataformas.Xbox);
     }
     @Override
-    public void installGame(){
-        System.out.printf("Juego installado en %s.%n", plataformas.Xbox);
+    public void installGame(Videojuegos videojuegos){
+        System.out.printf("%s installado en %s.%n",videojuegos.nombre, plataformas.Xbox);
     }
     @Override
-    public void uninstallGame(){
-        System.out.printf("Juego desinstalado en %s.%n", plataformas.Xbox);
+    public void uninstallGame(Videojuegos videojuegos){
+        System.out.printf("%s desinstalado en %s %n",videojuegos.nombre, plataformas.Xbox);
     }
     @Override
     public void playGame(){

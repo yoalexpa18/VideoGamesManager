@@ -1,12 +1,14 @@
 public class TiendaVideojuegos {
     public static void main(String[] args) {
 
-        String prueba = String.valueOf(new JuegoDigital("Zelda",12,Plataformas.Xbox,Genero.Aventura));
+        Videojuegos prueba = new JuegoDigital("Halo",12,Plataformas.Xbox,Genero.Aventura);
         System.out.println(prueba);
 
-        Xbox ps = new Xbox();
+        Xbox consola = new Xbox();
 
-        ps.switchOn();
-        System.out.println(ps.getPlataforma());
+        consola.switchOn();
+        System.out.println(consola.getPlataforma());
+        consola.installGame(prueba);
+
     }
 }

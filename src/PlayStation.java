@@ -11,12 +11,12 @@ public class PlayStation implements Console {
         System.out.printf("%s apagada%n", plataformas.PlayStation);
     }
     @Override
-    public void installGame(){
-        System.out.printf("Juego installado en %s%n", plataformas.PlayStation);
+    public void installGame(Videojuegos videojuegos){
+        System.out.printf("%s installado en %s.%n",videojuegos.nombre, plataformas.PlayStation);
     }
     @Override
-    public void uninstallGame(){
-        System.out.printf("Juego desinstalado en %s %n", plataformas.PlayStation);
+    public void uninstallGame(Videojuegos videojuegos){
+        System.out.printf("%s desinstalado en %s %n",videojuegos.nombre, plataformas.PlayStation);
     }
     @Override
     public void playGame(){
