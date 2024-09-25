@@ -16,7 +16,7 @@ public interface Console {
     void playGame();
 
     //Metodo que devuelve la plataforma de la consola
-    String getPlataforma();
+    String getPlataformas();
 
 
 }
