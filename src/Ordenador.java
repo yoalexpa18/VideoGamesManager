@@ -54,7 +54,7 @@ public class Ordenador implements Console {
 
             try (FileWriter fw = new FileWriter("Ordenador.txt")) {
 
-                // Iterar sobre la lista de videojuegos y escribir los datos en el archivo
+                // Insertar sobre la lista de videojuegos y escribir los datos en el archivo
                 for (Videojuegos v : vlis) {
                     String line = v.getNombre() + "," + v.getPlataforma() + "," + v.getPrecio() + "," + v.getGenero();
                     fw.write(line + "\n");

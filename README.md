@@ -1,1 +1,1 @@
-Esto es un ejerccio de clase que nos han dado libertad para hacerlo como querramos.
+Este ejercicio esta dedicado hacia mi profesor Sergio Jimenez, que me esta enseñando durante el segundo año de DAM por lo que estoy mut contento.
