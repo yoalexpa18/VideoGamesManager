@@ -1,1 +1,1 @@
-Este ejercicio esta dedicado hacia mi profesor Sergio Jimenez, que me esta enseñando durante el segundo año de DAM por lo que estoy mut contento.
+Ejercicio que realice para recordar un poco despues de las vacaciones.
